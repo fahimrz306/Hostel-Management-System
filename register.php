@@ -154,7 +154,7 @@ if (isset($_POST['submit'])) {
   $name = mysqli_real_escape_string($conn, $_POST['name']);
   $address = mysqli_real_escape_string($conn, $_POST['address']);
   $email = mysqli_real_escape_string($conn, $_POST['email']);
-  $password = mysqli_real_escape_string($conn, $_POST['password']);
+  $password = mysqli_real_escape_string($conn, md5($_POST['password']));
   $phone = mysqli_real_escape_string($conn, $_POST['phone']);
   $type= 2;
   $nid = mysqli_real_escape_string($conn, $_POST['nid']);
