@@ -11,7 +11,7 @@ if(!$conn)
 if(isset($_POST['submit'])){
     // receive all input values from the form
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = mysqli_real_escape_string($conn, md5($_POST['password']));
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
 
     $_SESSION['status']=false;
 
